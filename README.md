@@ -1,5 +1,15 @@
 # traffic
 
+## Menjalankan web
+
+Gunakan Node.js 20.6 atau lebih baru. Pastikan dependensi sudah terpasang (`npm install`) dan file `.env` berisi konfigurasi koneksi database (`DATABASE_URL` atau `PGHOST`, `PGUSER`, `PGPASSWORD`, dan `PGDATABASE`), lalu jalankan:
+
+```sh
+node --env-file=.env server.js
+```
+
+Buka <http://localhost:3000>. Port dapat diubah dengan mengatur `PORT` di `.env`.
+
 ## Input suara
 
 Setelah tombol mikrofon dinyalakan, percakapan langsung aktif tanpa wake word. Setiap ucapan ditranskripsikan dan dinilai AI apakah ditujukan ke Capri; ucapan latar tidak memotong jawaban atau mendapat respons. Wake word hanya diperlukan untuk mengaktifkan kembali mode percakapan setelah dimatikan dengan perintah suara. Mode standby masih mempertahankan akses mikrofon agar dapat mendengar wake word; klik tombol mikrofon untuk menghentikan akses mikrofon sepenuhnya.
